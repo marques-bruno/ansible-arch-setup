@@ -31,10 +31,10 @@
   
 # Install KDE and Additional Plasma Applications
 - include: kde.yml
-  when: '1' in desktop_environment
+  when: "'1' in desktop_environment"
 
 - include: xfce.yml
-  when: '2' in desktop_environment
+  when: "'2' in desktop_environment"
 
 # Web Browser
 - include: "{{browser}}.yml"
