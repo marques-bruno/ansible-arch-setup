@@ -9,8 +9,8 @@ vars_prompt:
     prompt: What is your username?
     private: no
     
-    - name: password
-      prompt: What's your password?
+  - name: password
+    prompt: What's your password?
   
 ## Task Configuration
 setup_zsh: True
