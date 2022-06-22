@@ -4,8 +4,13 @@
 # for the playbook to function.
 
 ## User info
-username: bruno
+- name: username
+  prompt: What is your username?
+  private: no
 
+- name: password
+  prompt: What's your password?
+  
 ## Task Configuration
 setup_zsh: True
 
