@@ -21,17 +21,17 @@
 - block:
     - include: ly.yml
     - include: ly_enable.yml
-    when: display_manager == '1'
+  when: display_manager == '1'
 
 - block:
     - include: lightdm.yml
     - include: lightdm_enable.yml
-    when: display_manager == '2'
+  when: display_manager == '2'
 
 - block:
     - include: sddm.yml
     - include: sddm_enable.yml
-    when: display_manager == '3'
+  when: display_manager == '3'
 
 
   
