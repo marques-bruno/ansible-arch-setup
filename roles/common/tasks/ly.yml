@@ -1,5 +1,5 @@
 - name: Ly Display manager
-  community.general.pacman:
-    name:
-    - ly 
+  aur:
+    name: ly
+    user: {{ username }}
 
