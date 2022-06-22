@@ -18,14 +18,20 @@
 - include: spacevim.yml
   when: install_spacevim == True
 
-- include: ly.yml
-  when: display_manager == '1'
+- block:
+    - include: ly.yml
+    - include: ly_enable.yml
+    when: display_manager == '1'
 
-- include: lightdm.yml
-  when: display_manager == '2'
+- block:
+    - include: lightdm.yml
+    - include: lightdm_enable.yml
+    when: display_manager == '2'
 
-- include: sddm.yml
-  when: display_manager == '3'
+- block:
+    - include: sddm.yml
+    - include: sddm_enable.yml
+    when: display_manager == '3'
 
 
   
@@ -47,10 +53,6 @@
 - include: office.yml
   when: install_office == True
 
-# Console based Email
-- include: aerc.yml
-  when: install_aerc == True
-  
 # AUR apps
 - include: aur.yml
   when: use_aur == True

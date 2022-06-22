@@ -1,0 +1,4 @@
+- name: Enable Ly in Systemd
+  ansible.builtin.systemd:
+    name: ly
+    enabled: yes

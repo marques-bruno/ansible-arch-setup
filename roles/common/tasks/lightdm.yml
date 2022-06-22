@@ -4,6 +4,3 @@
     - lightdm
     - lightdm-gtk-greeter
     
-  ansible.builtin.systemd:
-    name: lightdm
-    enabled: yes

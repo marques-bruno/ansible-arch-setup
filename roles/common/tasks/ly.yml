@@ -3,6 +3,3 @@
     name:
     - ly 
 
-  ansible.builtin.systemd:
-    name: ly
-    enabled: yes

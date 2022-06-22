@@ -2,7 +2,3 @@
   community.general.pacman:
     name:
     - sddm-kcm
-    
-  ansible.builtin.systemd:
-    name: lightdm
-    enabled: yes

@@ -15,9 +15,6 @@ dotfiles:
     destination: projects/dotfiles
     rcup_flags: -fx README.md
 
-## Desktop
-install_kde: False
-
 ## App Preferences
 ## ===========================
 # Web Browser
@@ -37,9 +34,6 @@ install_spacevim: False
 ## Or emacs if you're a weirdo like me...
 install_emacs: True
 ## ===========================
-
-## Console-based email client
-install_aerc: False
 
 ## AUR vars
 ## ===========================

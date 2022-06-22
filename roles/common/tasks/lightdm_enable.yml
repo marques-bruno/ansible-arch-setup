@@ -1,0 +1,4 @@
+- name: Enable LightDM in systemd
+  ansible.builtin.systemd:
+    name: lightdm
+    enabled: yes
