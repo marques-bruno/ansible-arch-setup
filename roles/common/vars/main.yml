@@ -4,41 +4,45 @@
 # for the playbook to function.
 
 ## User info
-username: keith
+username: bruno
 
 ## Task Configuration
 setup_zsh: True
 
 ## Dotfiles
 ## Please make sure to update 
-pull_dotfiles: True
+pull_dotfiles: False
 
 dotfiles:
-    url: https://github.com/linuxpiper/dotfiles.git
+    url: https://github.com/marques-bruno/dotfiles.git
     destination: projects/dotfiles
     rcup_flags: -fx README.md
 
 ## Desktop
-install_kde: True
+install_kde: False
 
 ## App Preferences
 ## ===========================
 # Web Browser
 # Value can be: vivaldi, firefox, brave, or chromium
-browser: vivaldi
+browser: firefox
 
 ## When set to True, will install elinks and w3m
 install_terminal_browsers: True
 
 ## Installs LibreOffice Fresh when True
-install_office: True
+install_office: False
 
 ## Spacevim? You know you need it
-install_spacevim: True
+install_spacevim: False
+## ===========================
+
+## Or emacs if you're a weirdo like me...
+install_emacs: True
 ## ===========================
 
 ## Console-based email client
-install_aerc: True
+install_aerc: False
 
 ## AUR vars
 ## ===========================
