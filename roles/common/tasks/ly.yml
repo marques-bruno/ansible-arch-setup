@@ -1,0 +1,8 @@
+- name: Ly Display manager
+  community.general.pacman:
+    name:
+    - ly 
+
+  ansible.builtin.systemd:
+    name: ly
+    enabled: yes

@@ -1,0 +1,9 @@
+- name: LightDM Display manager
+  community.general.pacman:
+    name:
+    - lightdm
+    - lightdm-gtk-greeter
+    
+  ansible.builtin.systemd:
+    name: lightdm
+    enabled: yes

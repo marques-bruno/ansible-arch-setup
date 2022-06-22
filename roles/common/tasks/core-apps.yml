@@ -2,6 +2,7 @@
   community.general.pacman:
    name:
     - xorg
+    - xorg-xinit
     - kitty
     - vlc
     - gimp

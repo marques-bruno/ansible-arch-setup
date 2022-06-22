@@ -18,9 +18,23 @@
 - include: spacevim.yml
   when: install_spacevim == True
 
+- include: ly.yml
+  when: display_manager == '1'
+
+- include: lightdm.yml
+  when: display_manager == '2'
+
+- include: sddm.yml
+  when: display_manager == '3'
+
+
+  
 # Install KDE and Additional Plasma Applications
 - include: kde.yml
-  when: install_kde == True
+  when: '1' in desktop_environment
+
+- include: xfce.yml
+  when: '2' in desktop_environment
 
 # Web Browser
 - include: "{{browser}}.yml"

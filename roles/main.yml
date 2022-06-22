@@ -4,3 +4,23 @@
   become: true
   roles:
       - common 
+
+  vars_prompt:
+
+    - name: username
+      prompt: What is your username?
+      private: no
+      default: bruno
+      
+    - name: password
+      prompt: What's your password?
+      unsafe: yes
+      private: yes
+
+    - name: display_manager
+      prompt: Which display manager? (only one is allowed)\n1- Ly (Console DM)\n2- LightDM (light graphical DM)\n3- SDDM (successor of KDM)
+      private: no
+     
+    - name: desktop_environment
+      prompt: Which Desktop Environent do you want to install?\n(multiple options possible (e.g 1,2 for KDE && XFCE))\n1- KDE\n2- XFCE
+      private: no
