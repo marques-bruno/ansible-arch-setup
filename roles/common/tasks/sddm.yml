@@ -1,4 +1,4 @@
-- name: Ly Display manager
+- name: SDDM Display manager
   community.general.pacman:
     name:
     - sddm-kcm

@@ -1,5 +1,4 @@
 - name: Ly Display manager
   aur:
     name: ly
-    user: {{ username }}
-
+    user: "{{ username }}"
