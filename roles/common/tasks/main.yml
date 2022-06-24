@@ -41,8 +41,8 @@
 
 - block:
     - include: exwm.yml
-    - include: spacemacs.yml
-    when: install_spacemacs == False
+      #- include: spacemacs.yml
+      #when: install_spacemacs == False
   when: "'3' in desktop_environment" 
 
 # Web Browser
