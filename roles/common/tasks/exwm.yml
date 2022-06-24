@@ -15,6 +15,11 @@
       - rofi
       - python-pywal
       - calc
+      - bc
+      - ttf-iosevka-nerd
+      - ttf-fantasque-sans-mono
+      - terminus-font-ttf
+      - ttd-droid
 
 - name: Get Polybar-themes
   become: yes

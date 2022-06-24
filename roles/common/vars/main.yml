@@ -50,4 +50,9 @@ aur:
         - ctmg
         - spiped
         - ttf-meslo-nerd-font-powerlevel10k
+        - networkmanager-dmenu
+        - ttf-icomoon-feather
+        - material-icons-git
+        - ttf-material-design-icons
+        - siji-ttf
 ## ===========================
