@@ -12,23 +12,16 @@
       private: no
       default: bruno
       
-    - name: password
-      prompt: What's your password?
-      unsafe: yes
-      private: yes
+      #- name: password
+      #prompt: What's your password?
+      #unsafe: yes
+      #private: yes
 
-    - name: display_manager
-      prompt: |-
-        Which display manager? (only one is allowed)
-          1- Ly (Console DM)
-          2- LightDM (light graphical DM)
-          3- SDDM (successor of KDM)
-      private: no
-     
     - name: desktop_environment
       prompt: |-
         Which Desktop Environent do you want to install?
-        (multiple options possible (e.g 1,2 for KDE && XFCE))
+        (multiple options possible (e.g 1,2 for KDE && XFCE), press RET for headless install)
           1- KDE
           2- XFCE
+          3- EXWM \# custom DE based on spacemacs (exwm) and polybar
       private: no

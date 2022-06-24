@@ -1,0 +1,11 @@
+---
+- name: Clone Spacemacs
+  git: repo=https://github.com/syl20bnr/spacemacs dest=/home/{{ username }}/.emacs.d accept_hostkey=yes update=no
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Install .spacemacs from dotfiles
+  become: True
+  become_user: "{{ username }}"
+  command: ln -f /home/{{ username }}/{{ dotfiles.destination }}/spacemacs /home/{{ username }}/.spacemacs
+  

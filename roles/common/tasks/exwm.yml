@@ -1,0 +1,9 @@
+- name: Install EXWM.desktop
+  command: ln -f /home/{{ username }}/{{ dotfiles.destination }}/exwm/EXWM.desktop /usr/share/xsessions/EXWM.desktop
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Install startexwm
+  command: ln -f /home/{{ username }}/{{ dotfiles.destination }}/exwm/startexwm /usr/local/bin/startexwm
+  become: yes
+  become_user: "{{ username }}" 

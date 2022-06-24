@@ -8,7 +8,7 @@ setup_zsh: True
 
 ## Dotfiles
 ## Please make sure to update 
-pull_dotfiles: False
+pull_dotfiles: True
 
 dotfiles:
     url: https://github.com/marques-bruno/dotfiles.git
@@ -31,8 +31,8 @@ install_office: False
 install_spacevim: False
 ## ===========================
 
-## Or emacs if you're a weirdo like me...
-install_emacs: True
+## Or join the dark side
+install_spacemacs: True
 ## ===========================
 
 ## AUR vars
