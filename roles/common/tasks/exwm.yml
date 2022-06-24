@@ -7,3 +7,26 @@
   command: ln -f /home/{{ username }}/{{ dotfiles.destination }}/exwm/startexwm /usr/local/bin/startexwm
   become: yes
   become_user: "{{ username }}" 
+
+- name: Install eyecandy
+  community.general.pacman:
+    name:
+      - polybar
+      - rofi
+      - python-pywal
+      - calc
+
+- name: Get Polybar-themes
+  become: yes
+  become_user: '{{ username }}'
+  shell: |
+    git clone --depth=1 https://github.com/adi1090x/polybar-themes /home/{{ username }}/.config/
+    cd /home/{{ username }}/.config/polybar-themes
+    find . -name '*.rasi' | xargs sed -i "s/element-text\s*{$/element-text {\n    background-color:  @al;\n    text-color: inherit;\n/g"
+    find . -name '*.rasi' | xargs sed -i "s/element-icon\s*{$/element-icon {\n    background-color:  @al;\n    text-color: inherit;\n/g"
+
+- name: Install Polybar-themes
+  expect:
+    command: /home/{{ username }}/.config/polybar-themes/setup.sh
+    responses:
+      - 1
