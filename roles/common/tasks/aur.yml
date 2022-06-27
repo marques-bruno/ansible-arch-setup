@@ -5,12 +5,18 @@
         group={{ username }}
 
 - name: Install AUR base packages
+  become: yes
+  become_user: "{{ username }}"
   kewlfft.aur.aur:
     name: "{{ aur.packages }}"
     user: "{{ username }}"
 
 - name: Install rcm
+  become: yes
+  become_user: "{{ username }}"
   kewlfft.aur.aur: name=rcm user={{ username }} 
 
 - name: Instal micro editor
+  become: yes
+  become_user: "{{ username }}"
   kewlfft.aur.aur: name=micro-git user={{ username }}
