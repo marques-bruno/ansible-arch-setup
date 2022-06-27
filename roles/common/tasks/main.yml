@@ -10,6 +10,10 @@
 # Basic apps (vlc, kitty, etc.)
 - include: core-apps.yml
 
+# Dotfiles
+- include: dotfiles.yml
+  when: pull_dotfiles == True
+
 # Install and configure zsh
 - include: zsh.yml
   when: setup_zsh == True
@@ -56,6 +60,3 @@
 - include: aur.yml
   when: use_aur == True
 
-# Dotfiles
-- include: dotfiles.yml
-  when: pull_dotfiles == True
