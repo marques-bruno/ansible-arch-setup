@@ -9,5 +9,5 @@
     mkdir -p /usr/local/share/backgrounds
     ln -f /home/{{ username }}/{{ dotfiles.destination }}/wallpapers/archlinux.jpg /usr/local/share/backgrounds/
     ln -f /home/{{ username }}/{{ dotfiles.destination }}/etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
-    ln -f /home/{{ username }}/{{ dotfiles.destination }}/themes/ /usr/local/share/themes/
-    ln -f /home/{{ username }}/{{ dotfiles.destination }}/icons/ /usr/local/share/icons/
+    ln -s /home/{{ username }}/{{ dotfiles.destination }}/themes/ /usr/local/share/themes/
+    ln -s /home/{{ username }}/{{ dotfiles.destination }}/icons/ /usr/local/share/icons/
