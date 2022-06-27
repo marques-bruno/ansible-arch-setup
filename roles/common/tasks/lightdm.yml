@@ -10,5 +10,5 @@
     mkdir -p /usr/local/share/backgrounds
     ln -f /home/{{ username }}/{{ dotfiles.destination }}/backgrounds/archlinux.jpg /usr/local/share/backgrounds/
     ln -f /home/{{ username }}/{{ dotfiles.destination }}/etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
-    ln -s /home/{{ username }}/{{ dotfiles.destination }}/themes/ /usr/share/themes/
-    ln -s /home/{{ username }}/{{ dotfiles.destination }}/icons/ /usr/share/icons/
+    cp -r /home/{{ username }}/{{ dotfiles.destination }}/themes/* /usr/share/themes/
+    cp -r /home/{{ username }}/{{ dotfiles.destination }}/icons/* /usr/share/icons/
