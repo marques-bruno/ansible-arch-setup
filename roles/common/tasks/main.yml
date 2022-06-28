@@ -9,6 +9,9 @@
 
 # Basic apps (vlc, kitty, etc.)
 - include: core-apps.yml
+- include: audio.yml
+- include: graphics.yml
+- include: networking.yml
 
 # Dotfiles
 - include: dotfiles.yml

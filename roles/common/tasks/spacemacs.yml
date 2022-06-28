@@ -1,4 +1,10 @@
 ---
+- name: Install EMacs
+  become: yes
+  community.general.pacman:
+    name:
+      - emacs
+
 - name: Clone Spacemacs
   git: repo=https://github.com/syl20bnr/spacemacs dest=/home/{{ username }}/.emacs.d accept_hostkey=yes update=no
   become: yes

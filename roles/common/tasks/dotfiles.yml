@@ -2,3 +2,32 @@
   git: repo={{ dotfiles.url }} dest=/home/{{ username }}/{{ dotfiles.destination }} accept_hostkey=yes update=no
   become: yes
   become_user: "{{ username }}"
+
+- name: copy .gitconfig folder
+  copy: 
+   src: /home/{{ username }}/{{ dotfiles.destination }}/gitconfig 
+   dest: /home/{{ username }}/.gitconfig
+   force: False
+   owner: "{{ username }}"
+   group: "{{ username }}"
+   mode: u+rw,g+r,o--
+
+- name: copy .bin folder
+  copy:
+    src: /home/{{ username }}/{{ dotfiles.destination }}/bin
+    dest: /home/{{ username }}/.bin
+    force: False
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: u+rw,g+r,o--
+
+- name: copy .config folder
+  copy:
+    src: /home/{{ username }}/{{ dotfiles.destination }}/config
+    dest: /home/{{ username }}/.config
+    force: False
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: u+rw,g+r,o--
+
+

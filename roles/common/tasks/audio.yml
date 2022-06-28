@@ -1,0 +1,7 @@
+- name: Install audio 
+  community.general.pacman:
+    name:
+      - pavucontrol
+      - playerctl
+      - pipewire
+

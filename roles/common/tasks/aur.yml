@@ -9,14 +9,14 @@
   become_user: "{{ username }}"
   kewlfft.aur.aur:
     name: "{{ aur.packages }}"
-    user: "{{ username }}"
+    use: makepkg
 
 - name: Install rcm
   become: yes
   become_user: "{{ username }}"
-  kewlfft.aur.aur: name=rcm user={{ username }} 
+  kewlfft.aur.aur: name=rcm use=makepkg 
 
 - name: Instal micro editor
   become: yes
   become_user: "{{ username }}"
-  kewlfft.aur.aur: name=micro-git user={{ username }}
+  kewlfft.aur.aur: name=micro-git use=makepkg

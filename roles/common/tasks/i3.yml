@@ -1,10 +1,4 @@
-- name: Install EXWM.desktop
-  command: ln -f /home/{{ username }}/{{ dotfiles.destination }}/exwm/EXWM.desktop /usr/share/xsessions/EXWM.desktop
-
-- name: Install startexwm
-  command: ln -f /home/{{ username }}/{{ dotfiles.destination }}/exwm/startexwm /usr/local/bin/startexwm
-
-- name: Install eyecandy
+- name: Install i3 
   community.general.pacman:
     name:
       - polybar
@@ -16,6 +10,8 @@
       - ttf-fantasque-sans-mono
       - ttf-droid
       - picom
+      - i3
+      - feh
 
 - name: Get Polybar-themes
   become: yes
