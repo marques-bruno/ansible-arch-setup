@@ -15,7 +15,7 @@
    state: present
 
 
-- name: change "{{ username }}"'s shell to zsh
+- name: change "{{ username }}" shell to zsh
   become: yes
   user:
    name: "{{ username }}"
@@ -46,7 +46,6 @@
     - skip_ansible_lint
   become: yes
   become_user: '{{ username }}'
-  # core.autocrlf=input prevents https://github.com/robbyrussell/oh-my-zsh/issues/4402
   command: 'git clone -c core.autocrlf=input https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh'
   args:
     chdir: '~{{ username }}'

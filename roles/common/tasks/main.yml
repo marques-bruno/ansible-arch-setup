@@ -13,13 +13,13 @@
 - include: graphics.yml
 - include: networking.yml
 
-# Dotfiles
-- include: dotfiles.yml
-  when: pull_dotfiles == True
-
 # Install and configure zsh
 - include: zsh.yml
   when: setup_zsh == True
+
+# Dotfiles
+- include: dotfiles.yml
+  when: pull_dotfiles == True
 
 # Install and configure spacevim
 - include: spacevim.yml
