@@ -1,0 +1,4 @@
+- name: Install network utilities
+  community.general.pacman:
+    name:
+      - network-manager-applet

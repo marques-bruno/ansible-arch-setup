@@ -1,0 +1,6 @@
+- name: Install rendering tools
+  community.general.pacman:
+    name:
+      - xorg
+      - xorg-xinit
+      - arandr

@@ -9,21 +9,8 @@
       - ttf-iosevka-nerd
       - ttf-fantasque-sans-mono
       - ttf-droid
-      - picom
+      - compton
       - i3
       - feh
+      - scrot 
 
-- name: Get Polybar-themes
-  become: yes
-  become_user: '{{ username }}'
-  shell: |
-    git clone --depth=1 https://github.com/adi1090x/polybar-themes /home/{{ username }}/.config/polybar-themes
-    cd /home/{{ username }}/.config/polybar-themes
-    find . -name '*.rasi' | xargs sed -i "s/element-text\s*{$/element-text {\n    background-color:  @al;\n    text-color: inherit;\n/g"
-    find . -name '*.rasi' | xargs sed -i "s/element-icon\s*{$/element-icon {\n    background-color:  @al;\n    text-color: inherit;\n/g"
-
-    #- name: Install Polybar-themes
-    #expect:
-    #command: /home/{{ username }}/.config/polybar-themes/setup.sh
-    #responses:
-    #  - 1
