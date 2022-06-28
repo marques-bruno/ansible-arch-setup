@@ -1,4 +1,4 @@
 - name: Ly Display manager
-  aur:
-    name: ly
-    user: "{{ username }}"
+  kewlfft.aur.aur: name=ly use=makepkg
+  become: yes
+  become_user: "{{ username }}"

@@ -10,7 +10,10 @@
       - ttf-fantasque-sans-mono
       - ttf-droid
       - compton
-      - i3
+      - i3-gaps
+      - i3blocks
+      - i3lock
+      - i3status
       - feh
       - scrot 
 

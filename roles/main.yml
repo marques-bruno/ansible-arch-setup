@@ -23,5 +23,5 @@
         (multiple options possible (e.g 1,2 for KDE && XFCE), press RET for headless install)
           1- KDE
           2- XFCE
-          3- EXWM \# custom DE based on spacemacs (exwm) and polybar
+          3- i3 \# custom setup with polybar
       private: no

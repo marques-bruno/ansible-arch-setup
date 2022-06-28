@@ -10,7 +10,7 @@
     - thefuck
     - tmux
     - lsd
-    - vim
+    - gvim
     - source-highlight
     - tree
     - base-devel

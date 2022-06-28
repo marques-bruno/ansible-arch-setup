@@ -43,9 +43,9 @@
   when: "'2' in desktop_environment"
 
 - block:
-    - include: exwm.yml
-      #- include: spacemacs.yml
-      #when: install_spacemacs == False
+    - include: i3.yml
+    - include: ly.yml
+    - include: ly_enable.yml
   when: "'3' in desktop_environment" 
 
 # Web Browser

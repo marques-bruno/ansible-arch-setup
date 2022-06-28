@@ -3,10 +3,16 @@
   become: yes
   become_user: "{{ username }}"
 
-- name: hard link the dotfiles
-   shell: |
+- name: Hard link the dotfiles
+  shell: |
     ln -f /home/{{ username }}/{{ dotfiles.destination }}/gitconfig /home/{{ username }}/.gitconfig
     cp -ral /home/{{ username }}/{{ dotfiles.destination }}/bin /home/{{ username }}/.bin
     cp -ral /home/{{ username }}/{{ dotfiles.destination }}/config /home/{{ username }}/.config
 
-
+- name: Hardlink system dotfiles 
+  shell: |
+    mkdir -p /usr/local/share/backgrounds
+    ln -f /home/{{ username }}/{{ dotfiles.destination }}/backgrounds/archlinux.jpg /usr/local/share/backgrounds/
+    cp -ral /home/{{ username }}/{{ dotfiles.destination }}/themes/* /usr/share/themes/
+    cp -ral /home/{{ username }}/{{ dotfiles.destination }}/icons/* /usr/share/icons/
+  become: yes
