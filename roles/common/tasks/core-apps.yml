@@ -16,6 +16,13 @@
     - base-devel
    state: present
 
+- name: install ranger
+  community.general.pacman:
+    name:
+      - python-pillow
+      - highlight
+      - ranger
+
 - name: Install archival utils
   pacman:
     name:
