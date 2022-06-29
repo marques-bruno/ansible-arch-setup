@@ -4,3 +4,7 @@
       - xorg
       - xorg-xinit
       - arandr
+
+- name: Link udev rules
+  shell: |
+    ln -s /home/bruno/projects/dotfiles/etc/udev/rules.d/backlight.rules /etc/udev/rules.d/backlight.rules

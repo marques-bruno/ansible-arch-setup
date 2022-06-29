@@ -11,11 +11,11 @@
     cp -ral /home/{{ username }}/{{ dotfiles.destination }}/bin /home/{{ username }}/.bin
     cp -ral /home/{{ username }}/{{ dotfiles.destination }}/config /home/{{ username }}/.config
     cp -ral /home/{{ username }}/{{ dotfiles.destination }}/zsh /home/{{ username }}/.zsh
+    cp -ral /home/{{ username }}/{{ dotfiles.destination }}/themes/ /home/{{ username }}/.themes/
+    cp -ral /home/{{ username }}/{{ dotfiles.destination }}/icons/ /home/{{ username }}/.icons/
 
-- name: Hardlink system dotfiles 
+- name: link system dotfiles 
   shell: |
     mkdir -p /usr/local/share/backgrounds
-    ln -f /home/{{ username }}/{{ dotfiles.destination }}/backgrounds/archlinux.jpg /usr/local/share/backgrounds/
-    cp -ral /home/{{ username }}/{{ dotfiles.destination }}/themes/* /usr/share/themes/
-    cp -ral /home/{{ username }}/{{ dotfiles.destination }}/icons/* /usr/share/icons/
+    ln -s /home/{{ username }}/{{ dotfiles.destination }}/backgrounds/* /usr/local/share/backgrounds/
   become: yes
