@@ -16,4 +16,5 @@
       - i3status
       - feh
       - scrot 
-
+      - wmctrl
+      - lxappearance
