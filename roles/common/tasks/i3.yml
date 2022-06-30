@@ -18,3 +18,5 @@
       - scrot 
       - wmctrl
       - lxappearance
+      - numlockx
+      - polkit
