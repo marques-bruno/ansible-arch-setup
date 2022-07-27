@@ -14,6 +14,8 @@
     - source-highlight
     - tree
     - base-devel
+    - htop
+    - archey3
    state: present
 
 - name: install ranger
