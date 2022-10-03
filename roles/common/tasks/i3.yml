@@ -3,6 +3,7 @@
     name:
       - polybar
       - rofi
+      - dunst
       - python-pywal
       - calc
       - bc

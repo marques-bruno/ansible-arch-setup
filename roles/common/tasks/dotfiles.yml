@@ -7,8 +7,9 @@
   shell: |
     ln -f /home/{{ username }}/{{ dotfiles.destination }}/zshrc /home/{{ username }}/.zshrc
     ln -f /home/{{ username }}/{{ dotfiles.destination }}/gitconfig /home/{{ username }}/.gitconfig
-    ln -f /home/{{ username }}/{{ dotfiles.destination }}/vimrc /home/{{ username }}/.vimrc
     ln -f /home/{{ username }}/{{ dotfiles.destination }}/p10k /home/{{ username }}/.p10k
+    ln -f /home/{{ username }}/{{ dotfiles.destination }}/vimrc /home/{{ username }}/.vimrc
+    cp -ral /home/{{ username }}/{{ dotfiles.destination }}/vim /home/{{ username }}/.vim
     cp -ral /home/{{ username }}/{{ dotfiles.destination }}/bin /home/{{ username }}/.bin
     cp -ral /home/{{ username }}/{{ dotfiles.destination }}/config /home/{{ username }}/.config
     cp -ral /home/{{ username }}/{{ dotfiles.destination }}/zsh /home/{{ username }}/.zsh

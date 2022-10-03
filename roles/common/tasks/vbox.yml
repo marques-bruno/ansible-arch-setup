@@ -1,0 +1,7 @@
+- name: install ranger
+  community.general.pacman:
+    name:
+      - virtualbox
+      - virtualbox-guest-utils 
+
+

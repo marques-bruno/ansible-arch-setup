@@ -1,9 +1,13 @@
 - name: install basic utils, shells, apps
   community.general.pacman:
    name:
+    - linux-firmware
+    - linux-headers
     - xorg
     - xorg-xinit
+    - arandr
     - kitty
+    - kitty-terminfo
     - vlc
     - gimp
     - git
@@ -14,6 +18,16 @@
     - source-highlight
     - tree
     - base-devel
+    - gdb
+    - gcc
+    - cmake
+    - cmake-curses-gui
+    - ccache
+    - clang
+    - autoconf
+    - automake
+    - libtool
+    - atool
     - htop
     - archey3
    state: present
@@ -50,4 +64,21 @@
 - name: Install ImageMagick
   pacman:
     name: imagemagick
+    state: present
+
+- name: Install various extra utilities
+  pacman:
+    name:
+      - sqlitebrowser
+      - sshpass
+      - repo
+      - tcpdump
+      - wireshark-cli
+      - wireshark-qt
+      - qemu-base
+      - qemu-emulators-full
+      - qemu-user-static
+      - docker
+      - docker-compose
+      - code
     state: present

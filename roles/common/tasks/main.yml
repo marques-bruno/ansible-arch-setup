@@ -13,6 +13,10 @@
 - include: graphics.yml
 - include: networking.yml
 
+# Install virutalbox guest utilities
+- include : vbox.yml
+  when: is_vm == True
+
 # Install and configure zsh
 - include: zsh.yml
   when: setup_zsh == True

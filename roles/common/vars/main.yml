@@ -54,4 +54,7 @@ aur:
         - ttf-icomoon-feather
         - siji-ttf
         - xcursor-oxygen
+        - binfmt-qemu-static
+        - downgrade
+        - google-chrome
 ## ===========================
