@@ -27,15 +27,16 @@
     - autoconf
     - automake
     - libtool
-    - atool
     - htop
     - archey3
+    - patch
    state: present
 
 - name: install ranger
   community.general.pacman:
     name:
       - python-pillow
+      - python-pip
       - highlight
       - ranger
 
