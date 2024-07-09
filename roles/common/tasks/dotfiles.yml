@@ -19,5 +19,5 @@
 - name: link system dotfiles 
   shell: |
     mkdir -p /usr/local/share/backgrounds
-    ln -s /home/{{ username }}/{{ dotfiles.destination }}/backgrounds/* /usr/local/share/backgrounds/
+    ln -sf /home/{{ username }}/{{ dotfiles.destination }}/backgrounds/* /usr/local/share/backgrounds/
   become: yes

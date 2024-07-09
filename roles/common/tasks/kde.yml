@@ -3,6 +3,6 @@
    name: 
     - plasma-meta
     - kde-applications-meta
-    - clementine
+    #- clementine
     - audacious
    state: present

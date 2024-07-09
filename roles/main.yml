@@ -28,5 +28,5 @@
 
     - name: is_vm
       prompt: Is this a virtual machine? (y/N)
-        private: no
-        default: N
+      private: no
+      default: N

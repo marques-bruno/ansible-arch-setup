@@ -5,65 +5,65 @@
 
 
 # Configure pacman (colorize and repos)
-- include: pacman.yml
+- include_tasks: pacman.yml
 
 # Basic apps (vlc, kitty, etc.)
-- include: core-apps.yml
-- include: audio.yml
-- include: graphics.yml
-- include: networking.yml
+- include_tasks: core-apps.yml
+- include_tasks: audio.yml
+- include_tasks: graphics.yml
+- include_tasks: networking.yml
 
 # Install virutalbox guest utilities
-- include : vbox.yml
+- include_tasks: vbox.yml
   when: is_vm == True
 
 # Install and configure zsh
-- include: zsh.yml
+- include_tasks: zsh.yml
   when: setup_zsh == True
 
 # Dotfiles
-- include: dotfiles.yml
+- include_tasks: dotfiles.yml
   when: pull_dotfiles == True
 
 # Install and configure spacevim
-- include: spacevim.yml
+- include_tasks: spacevim.yml
   when: install_spacevim == True
 
 # Install spacemacs
-- include: spacemacs.yml
+- include_tasks: spacemacs.yml
   when: install_spacemacs == True
 
 # Install KDE and Additional Plasma Applications
 - block:
-    - include: kde.yml
-    - include: sddm.yml
-    - include: sddm_enable.yml
+    - include_tasks: kde.yml
+    - include_tasks: sddm.yml
+    - include_tasks: sddm_enable.yml
   when: "'1' in desktop_environment"
 
 - block:
-    - include: xfce.yml
-    - include: lightdm.yml
-    - include: lightdm_enable.yml
+    - include_tasks: xfce.yml
+    - include_tasks: lightdm.yml
+    - include_tasks: lightdm_enable.yml
   when: "'2' in desktop_environment"
 
 - block:
-    - include: i3.yml
-    - include: ly.yml
-    - include: ly_enable.yml
+    - include_tasks: i3.yml
+    - include_tasks: ly.yml
+    - include_tasks: ly_enable.yml
   when: "'3' in desktop_environment" 
 
 # Web Browser
-- include: "{{browser}}.yml"
+- include_tasks: "{{browser}}.yml"
 
 # Terminal web browsers
-- include: terminal_browsers.yml
+- include_tasks: terminal_browsers.yml
   when: install_terminal_browsers == True
 
 # Office
-- include: office.yml
+- include_tasks: office.yml
   when: install_office == True
 
 # AUR apps
-- include: aur.yml
+- include_tasks: aur.yml
   when: use_aur == True
 

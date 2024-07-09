@@ -21,14 +21,14 @@
     - gdb
     - gcc
     - cmake
-    - cmake-curses-gui
+    #- cmake-curses-gui
     - ccache
     - clang
     - autoconf
     - automake
     - libtool
     - htop
-    - archey3
+    #- archey3
     - patch
    state: present
 
