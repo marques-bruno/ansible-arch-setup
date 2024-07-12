@@ -15,6 +15,7 @@
     - tmux
     - lsd
     - vim
+    - neovim
     - source-highlight
     - tree
     - base-devel
@@ -24,12 +25,19 @@
     #- cmake-curses-gui
     - ccache
     - clang
+    - cppcheck
     - autoconf
     - automake
     - libtool
     - htop
     #- archey3
     - patch
+    - python-invoke
+    - pyright
+    - doxygen
+    - npm
+    - nodejs
+    - ninja
    state: present
 
 - name: install ranger

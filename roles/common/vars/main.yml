@@ -47,14 +47,15 @@ aur:
         - zplug
         - miller
         - myrepos
-        - ctmg
+        #- ctmg
         - spiped
         - ttf-meslo-nerd-font-powerlevel10k
         - networkmanager-dmenu
         - ttf-icomoon-feather
         - siji-ttf
-        - xcursor-oxygen
+        #- xcursor-oxygen
         - binfmt-qemu-static
         - downgrade
         - google-chrome
+        - cmake-lint
 ## ===========================
