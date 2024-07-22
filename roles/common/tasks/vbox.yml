@@ -1,4 +1,4 @@
-- name: install ranger
+- name: install virtuabox guest utils
   community.general.pacman:
     name:
       - virtualbox
